@@ -7,3 +7,9 @@ entries:
         url: https://www.linkedin.com/in/lalinsky
       - title: github
         url: https://github.com/lalinsky
+  - title: work
+    entries:
+      - title: acoustid
+        url: https://acoustid.org/
+      - title: soundstack
+        url: https://soundstack.com/
