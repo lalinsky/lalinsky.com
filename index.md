@@ -1,4 +1,5 @@
 ---
-title-heading: false
+layout: home
+title: Lukáš Lalinský
 ---
 Lukáš Lalinský

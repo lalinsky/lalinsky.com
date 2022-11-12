@@ -1,3 +1,9 @@
-name: Lukáš Lalinský
-title: null
+title: Lukáš Lalinský
+email: lukas@lalinsky.com
+url: https://lalinsky.com
 remote_theme: riggraz/no-style-please
+
+theme_config:
+  appearance: "light"
+  date_format: "%Y-%m-%d"
+  show_description: false
