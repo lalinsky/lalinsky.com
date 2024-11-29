@@ -7,3 +7,6 @@ theme_config:
   appearance: "light"
   date_format: "%Y-%m-%d"
   show_description: false
+
+plugins:
+  - jekyll-feed
