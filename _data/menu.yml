@@ -13,3 +13,9 @@ entries:
         url: https://acoustid.org/
       - title: soundstack
         url: https://soundstack.com/
+  - title: blog
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: archive...
+      show_more_url: archive.html
