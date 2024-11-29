@@ -8,5 +8,7 @@ theme_config:
   date_format: "%Y-%m-%d"
   show_description: false
 
+permalink: /:year/:month/:day/:title:output_ext
+
 plugins:
   - jekyll-feed
