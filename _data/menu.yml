@@ -3,10 +3,12 @@ entries:
     entries:
       - title: email
         url: mailto:lukas@lalinsky.com
-      - title: linkedin
-        url: https://www.linkedin.com/in/lalinsky
+      - title: mastodon
+        url: https://mastodon.social/@lukaslalinsky
       - title: github
         url: https://github.com/lalinsky
+      - title: linkedin
+        url: https://www.linkedin.com/in/lalinsky
   - title: work
     entries:
       - title: acoustid
