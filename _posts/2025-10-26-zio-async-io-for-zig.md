@@ -61,7 +61,10 @@ fn connectionTask(rt: *zio.Runtime, stream: zio.net.Stream) !void {
     var write_buffer: [4096]u8 = undefined;
     var writer = stream.writer(rt, &write_buffer);
 
-    var server = std.http.Server.init(&reader.interface, &writer.interface);
+    var server = std.http.Server.init(
+        &reader.interface,
+        &writer.interface,
+    );
 
     while (true) {
         var request = try server.receiveHead();
@@ -81,7 +84,8 @@ fn serverTask(rt: *zio.Runtime) !void {
         const stream = try server.accept(rt);
         errdefer stream.close(rt);
 
-        var task = try rt.spawn(connectionTask, .{ rt, stream }, .{});
+        var task = try rt.spawn( connectionTask, .{ rt, stream }, .{},
+        );
         task.deinit();
     }
 }
