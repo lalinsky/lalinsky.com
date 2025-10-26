@@ -75,7 +75,7 @@ fn connectionTask(rt: *zio.Runtime, stream: zio.net.Stream) !void {
 }
 
 fn serverTask(rt: *zio.Runtime) !void {
-    const addr = try zio.net.IpAddress.parseIp4("127.0.0.1", 8080);
+    const addr = try zio.net.IpAddress.parse("127.0.0.1", 8080);
 
     const server = try addr.listen(rt, .{});
     defer server.close(rt);
@@ -84,7 +84,8 @@ fn serverTask(rt: *zio.Runtime) !void {
         const stream = try server.accept(rt);
         errdefer stream.close(rt);
 
-        var task = try rt.spawn( connectionTask, .{ rt, stream }, .{},
+        var task = try rt.spawn(
+            connectionTask, .{ rt, stream }, .{}
         );
         task.deinit();
     }
@@ -105,4 +106,3 @@ pub fn main() !void {
 When I started working with Zig, I really thought it's going to be a niche language to write the fast code in, and then I'll need a layer on top of
 that in a different language. With Zio, that changed. The next step for me is to update my NATS client to use Zio internally. And after that,
 I'm going to work on a HTTP client/server library based on Zio.
-
