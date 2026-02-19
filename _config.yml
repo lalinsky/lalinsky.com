@@ -44,7 +44,7 @@ footer_links:
     url: https://www.linkedin.com/in/lalinsky
     icon: fab fa-linkedin
   - title: Feed
-    url: atom.xml
+    url: feed.xml
     icon: fas fa-rss-square
 
 defaults:
