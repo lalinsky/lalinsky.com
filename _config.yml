@@ -12,3 +12,7 @@ permalink: /:year/:month/:day/:title:output_ext
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Bluesky integration
+bluesky_handle: lukaslalinsky.bsky.social

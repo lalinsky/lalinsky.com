@@ -7,6 +7,7 @@ tags:
 - zig
 - networking
 - async
+bluesky_post_uri: https://bsky.app/profile/lukaslalinsky.bsky.social/post/3m43z33ars22u
 ---
 
 I've been watching the [Zig](https://ziglang.org/) language for a while now, given that it was created for
