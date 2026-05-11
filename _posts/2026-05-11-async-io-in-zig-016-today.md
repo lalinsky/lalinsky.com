@@ -108,6 +108,10 @@ That's the expected time, since all tasks run truly concurrently.
 You can increase this to 50,000 or more tasks and it will continue
 to work, limited only by available memory.
 
+You can use this `io` instance for anything you'd use `std.Io.Threaded` for.
+To write an HTTP server with `std.http.Server`, for example, just pass zio's
+`io` and it will work the same way.
+
 If you want to use async I/O in Zig 0.16 with the standard APIs,
 you don't need to wait for `std.Io.Evented` to be ready. Zio's
 implementation is still new, so if you hit any problems, please
