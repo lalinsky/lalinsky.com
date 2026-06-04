@@ -94,4 +94,9 @@ try handleRequest(...);
 ```
 
 
+Of course, none of this rules out the more targeted approach. When all you need is a timeout on a single
+operation, like `accept` or `connect`, or on a reader/writer, you can still set one directly on that
+operation; zio supports that mode as well. The `AutoCancel` block is just the general tool that covers
+everything else, including code that knows nothing about timeouts.
+
 I'm really happy with this design and it's one of the parts of zio's API I'm proud of. It's very easy to use and it has very little cost on the runtime.
