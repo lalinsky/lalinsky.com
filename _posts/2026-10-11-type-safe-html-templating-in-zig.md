@@ -17,10 +17,10 @@ Two years ago, I picked up Zig, and I'd never have imagined I'd be considering w
 
 That said, one thing was still missing: templating. String concatenation was not an option, I didn't want to go back to the pre-2000 CGI days. I had a few requirements for a templating library:
 
-1) It has to be type-safe, with all inputs typed and checked at compile time. I've dealt with dynamic languages enough in my life, and I don't want to deal with runtime template errors anymore.
-2) It has to be fast. No allocations, no intermediate state, just write the output to `std.Io.Writer` directly.
-3) It needs to have safe defaults. I don't want to deal with XSS anymore, so all inputs have to be escaped by default.
-4) It should still feel like writing HTML. I didn't want a Zig-based DSL I'd have to fight constantly.
+1. It has to be type-safe, with all inputs typed and checked at compile time. I've dealt with dynamic languages enough in my life, and I don't want to deal with runtime template errors anymore.
+2. It has to be fast. No allocations, no intermediate state, just write the output to `std.Io.Writer` directly.
+3. It needs to have safe defaults. I don't want to deal with XSS anymore, so all inputs have to be escaped by default.
+4. It should still feel like writing HTML. I didn't want a Zig-based DSL I'd have to fight constantly.
 
 I couldn't find any solution that would satisfy all these requirements. Then I saw [Ziex](https://ziex.dev/) and I was amazed. It never occurred to me that the [JSX](https://legacy.reactjs.org/docs/introducing-jsx.html) approach could be done outside of JavaScript. The developer experience Nurul Huda managed to build in Zig was just unimaginable to me. It didn't fit my needs directly, because I didn't want a WASM framework, but the syntax and his approach to integrating Zig code into templates gave me some ideas. Then, after further research, I discovered [Templ](https://templ.guide/) for Go, and it was pretty obvious to me what I wanted to build.
 
